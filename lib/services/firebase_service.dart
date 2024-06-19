@@ -22,7 +22,7 @@ Future<void> saveUser(String name, String email, String password) async {
   await db.collection('people').add({
     'name': name,
     'email': email,
-    'password': hashedPassword, // Guarda la contraseña encriptada
+    'password': hashedPassword, // Guarda contraseña encriptada
   });
 }
 
@@ -33,13 +33,13 @@ Future<Map<String, dynamic>?> authenticateUser(String nameOrEmail, String passwo
   CollectionReference collectionReferencePeople = db.collection('people');
   QuerySnapshot query = await collectionReferencePeople
       .where('name', isEqualTo: nameOrEmail)
-      .where('password', isEqualTo: hashedPassword) // Compara la contraseña encriptada
+      .where('password', isEqualTo: hashedPassword) // contraseña encriptada
       .get();
 
   if (query.docs.isEmpty) {
     query = await collectionReferencePeople
         .where('email', isEqualTo: nameOrEmail)
-        .where('password', isEqualTo: hashedPassword) // Compara la contraseña encriptada
+        .where('password', isEqualTo: hashedPassword) // contraseña encriptada
         .get();
   }
 
@@ -49,3 +49,7 @@ Future<Map<String, dynamic>?> authenticateUser(String nameOrEmail, String passwo
 
   return null;
 }
+
+
+
+

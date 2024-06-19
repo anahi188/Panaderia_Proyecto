@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:panaderia/pages/login_page.dart';
 
 class PackagesPage extends StatefulWidget {
   const PackagesPage({super.key});
@@ -77,7 +76,7 @@ class _PackagesPageState extends State<PackagesPage> {
                     title: const Text("Pastelería"),
                     onTap: () {
                       Navigator.pushNamed(context, "/pasteleria");
-                    }, //poner la ruta
+                    }, 
                     contentPadding: EdgeInsets.only(left: 70.0),
                   ),
                   ListTile(
@@ -214,6 +213,12 @@ class _PackagesPageState extends State<PackagesPage> {
                                     color:  Color.fromARGB(255, 121, 85, 72),
                                   ),
                                 ),
+                                IconButton(
+                                  icon: const Icon(Icons.shopping_cart),
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/shopping');
+                                  },
+                                ),
                               ],
                             ),
                           ),
@@ -246,6 +251,7 @@ class _PackagesPageState extends State<PackagesPage> {
                                     color: Colors.black,
                                   ),
                                 ),
+                                
                                 const SizedBox(height: 5),
                                 const Text(
                                   '\$97.22',
@@ -254,6 +260,12 @@ class _PackagesPageState extends State<PackagesPage> {
                                     fontWeight: FontWeight.bold,
                                     color:  Color.fromARGB(255, 121, 85, 72),
                                   ),
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.shopping_cart),
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/shopping');
+                                  },
                                 ),
                               ],
                             ),
@@ -295,6 +307,12 @@ class _PackagesPageState extends State<PackagesPage> {
                                     fontWeight: FontWeight.bold,
                                     color:  Color.fromARGB(255, 121, 85, 72),
                                   ),
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.shopping_cart),
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/shopping');
+                                  },
                                 ),
                               ],
                             ),
@@ -346,6 +364,12 @@ class _PackagesPageState extends State<PackagesPage> {
                                     color:  Color.fromARGB(255, 121, 85, 72),
                                   ),
                                 ),
+                                IconButton(
+                                  icon: const Icon(Icons.shopping_cart),
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/shopping');
+                                  },
+                                ),
                               ],
                             ),
                           ),
@@ -387,6 +411,12 @@ class _PackagesPageState extends State<PackagesPage> {
                                     color:  Color.fromARGB(255, 121, 85, 72),
                                   ),
                                 ),
+                                IconButton(
+                                  icon: const Icon(Icons.shopping_cart),
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/shopping');
+                                  },
+                                ),
                               ],
                             ),
                           ),
@@ -427,6 +457,12 @@ class _PackagesPageState extends State<PackagesPage> {
                                     fontWeight: FontWeight.bold,
                                     color:  Color.fromARGB(255, 121, 85, 72),
                                   ),
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.shopping_cart),
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/shopping');
+                                  },
                                 ),
                               ],
                             ),

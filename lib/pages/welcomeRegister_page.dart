@@ -123,8 +123,7 @@ class WelcomeRegisterPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  color:
-                      const Color(0xFFF6F5EC), 
+                  color:const Color(0xFFF6F5EC), 
                   child: Column(
                     children: [
                       Align(
@@ -153,6 +152,7 @@ class WelcomeRegisterPage extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                     ],
+                    
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -172,10 +172,9 @@ class WelcomeRegisterPage extends StatelessWidget {
                   child: Stack(
                     children: [
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(
-                            20.0), // Ajusta el radio de las esquinas según tu preferencia
+                        borderRadius: BorderRadius.circular(20.0),
                         child: Image.asset(
-                          'images/panaderia.jpg', // Ruta de tu imagen grande
+                          'images/panaderia.jpg',
                           width: double.infinity,
                           height: 400,
                           fit: BoxFit.cover,

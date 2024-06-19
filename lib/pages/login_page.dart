@@ -17,13 +17,13 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent, // Hacer que el fondo sea transparente
+      backgroundColor: Colors.transparent, 
       body: Center(
         child: Container(
-          width: MediaQuery.of(context).size.width * 0.8, // Ancho del contenedor al 80% del ancho de la pantalla
+          width: MediaQuery.of(context).size.width * 0.8,
           padding: const EdgeInsets.all(20.0),
           decoration: BoxDecoration(
-            color: Theme.of(context).cardColor, // Utilizar el color de tarjeta del tema actual
+            color: Theme.of(context).cardColor, 
             borderRadius: BorderRadius.circular(20.0),
           ),
           child: Form(
@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     IconButton(
                       onPressed: () {
-                        Navigator.pop(context); // Cierra la ventana de login
+                        Navigator.pop(context); 
                       },
                       icon: const Icon(Icons.close, color: Colors.black),
                     ),
@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                   "Acceso",
                   style: TextStyle(
                     fontFamily: "DMSerifDisplay",
-                    fontSize: 30.0, // Tamaño de la fuente reducido
+                    fontSize: 30.0, 
                     color: Color.fromARGB(255, 111, 88, 71),
                   ),
                 ),

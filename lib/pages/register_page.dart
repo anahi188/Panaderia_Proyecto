@@ -31,7 +31,7 @@ class RegisterPage extends StatelessWidget {
                 'Registrarse',
                 style: TextStyle(
                   fontFamily: "DMSerifDisplay",
-                  fontSize: 30.0, // Tamaño de la fuente reducido
+                  fontSize: 30.0,
                   color: Color.fromARGB(255, 111, 88, 71),
                 ),
               ),
@@ -130,7 +130,7 @@ class RegisterPage extends StatelessWidget {
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 10,
                   ),
@@ -142,7 +142,7 @@ class RegisterPage extends StatelessWidget {
                 child: const Text('Registrarse', style: TextStyle(fontSize: 18, color: Colors.white)),
               ),
               //PIE DE PAGINA
-              const SizedBox(height: 232), //CUANDO SE PONE ENVIAR ESTO SE BAJA Y SALE LINEA AMARILLA
+              const SizedBox(height: 232), 
               Container(
                 color: const Color(0xFFB29079),
                 padding: const EdgeInsets.symmetric(vertical: 10.0),

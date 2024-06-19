@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:panaderia/pages/login_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -72,15 +71,15 @@ class WelcomePage extends StatelessWidget {
                     title: const Text("Pastelería"),
                     onTap: () {
                       Navigator.pushNamed(context, "/pasteleria");
-                    }, //poner la ruta
-                    contentPadding: EdgeInsets.only(left: 70.0),
+                    }, 
+                    contentPadding: const EdgeInsets.only(left: 70.0),
                   ),
                   ListTile(
                     title: const Text("Panadería"),
                     onTap: () {
                       Navigator.pushNamed(context, "/panaderia");
                     },
-                    contentPadding: EdgeInsets.only(left: 70.0),
+                    contentPadding: const EdgeInsets.only(left: 70.0),
                   ),
                 ],
               ),
@@ -101,25 +100,13 @@ class WelcomePage extends StatelessWidget {
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.account_circle),
-                title: const Text("Acceder"),
+                leading: const Icon(Icons.exit_to_app),
+                title: const Text("Salir"),
                 iconColor: const Color.fromARGB(255, 92, 77, 66),
                 onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                        backgroundColor: Colors.transparent,
-                        content: SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.9,
-                          child:
-                              const LoginPage(), // Muestra el LoginPage como ventana emergente
-                        ),
-                      );
-                    },
-                  );
+                  Navigator.pushNamed(context, "/");
                 },
-              )
+              ),
             ],
           ),
         ),

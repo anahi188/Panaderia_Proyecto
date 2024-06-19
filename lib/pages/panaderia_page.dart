@@ -536,6 +536,24 @@ class PanaderiaPage extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 20),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "/register");
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromRGBO(102, 64, 50, 1.0),
+                ),
+                child: const Text(
+                  'Ver más',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+            
             //PIE DE PAGINA
             const SizedBox(height: 20),
             Container(

@@ -549,11 +549,13 @@ class PasteleriaPage extends StatelessWidget {
                 child: const Text(
                   'Ver más',
                   style: TextStyle(
-                    color: Colors.white, // Color del texto
+                    color: Colors.white,
                   ),
                 ),
               ),
             ),
+
+            
             //PIE DE PAGINA
             const SizedBox(height: 20),
             Container(

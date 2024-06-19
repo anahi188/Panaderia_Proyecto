@@ -6,6 +6,7 @@ import 'package:panaderia/pages/packages_page.dart';
 import 'package:panaderia/pages/panaderia_page.dart';
 import 'package:panaderia/pages/pasteleria_page.dart';
 import 'package:panaderia/pages/register_page.dart';
+import 'package:panaderia/pages/shoppingCart_page.dart';
 import 'package:panaderia/pages/welcomeRegister_page.dart';
 import 'package:panaderia/pages/welcome_page.dart';
 
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         "/panaderia": (context) => const PanaderiaPage(), 
         "/contact": (context) => const ContactPage(),
         "/packages": (context) => const PackagesPage(),
+        "/shopping": (context) => const ShoppingCartPage(),
 
         
       },
