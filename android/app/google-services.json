@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "387865531845",
+    "project_id": "panaderia-8fb24",
+    "storage_bucket": "panaderia-8fb24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387865531845:android:cb237514a93def7cbde7ac",
+        "android_client_info": {
+          "package_name": "panaderia.base.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfSKyf2MMAJP4TkXl1kywBKgHSPHn2wuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
