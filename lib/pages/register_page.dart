@@ -126,7 +126,7 @@ class RegisterPage extends StatelessWidget {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
                     await saveUser(_name, _email, _password);
-                    Navigator.pushNamed(context, "/welcome");
+                    Navigator.pushNamed(context, "/");
                   }
                 },
                 style: ElevatedButton.styleFrom(
