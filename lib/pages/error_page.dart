@@ -13,7 +13,7 @@ class _ErrorPageState extends State<ErrorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Pagina en construcción"),
+        title: const Text("Pagina en construcción"),
       ),
       body: const Center(
         child: Text("Pagina en construcción"),

@@ -11,7 +11,7 @@ class ContactPage extends StatelessWidget {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(10.0),
+        preferredSize: const Size.fromHeight(10.0),
         child: AppBar(
           backgroundColor: const Color(0xFFB29079),
           centerTitle: true,
@@ -23,7 +23,7 @@ class ContactPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 80),
+              const SizedBox(height: 80),
               const Text(
                 '¡Ponerse en contacto!',
                 style: TextStyle(
@@ -34,7 +34,7 @@ class ContactPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0),
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: Form(
                   key: _formKey,
                   child: Column(
@@ -43,10 +43,9 @@ class ContactPage extends StatelessWidget {
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20.0),
-                            //Modificar el borde de radio 
                           ),
                           labelText: 'Nombre de Usuario*',
-                          labelStyle: TextStyle(color: const Color.fromARGB(255, 75, 75, 75)),
+                          labelStyle: const TextStyle(color: Color.fromARGB(255, 75, 75, 75)),
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -58,14 +57,14 @@ class ContactPage extends StatelessWidget {
                           _nombre = value ?? '';
                         },
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           labelText: 'Correo Electrónico*',
-                          labelStyle: TextStyle(color: const Color.fromARGB(255, 75, 75, 75)),
+                          labelStyle: const TextStyle(color: Color.fromARGB(255, 75, 75, 75)),
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -74,7 +73,7 @@ class ContactPage extends StatelessWidget {
                           return null;
                         },
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -82,7 +81,7 @@ class ContactPage extends StatelessWidget {
                             //Modificar el borde de radio 
                           ),
                           labelText: 'Tú comentario*',
-                          labelStyle: TextStyle(color: const Color.fromARGB(255, 75, 75, 75)),
+                          labelStyle: const TextStyle(color: Color.fromARGB(255, 75, 75, 75)),
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -104,14 +103,11 @@ class ContactPage extends StatelessWidget {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    // Procesar la autenticación aquí
-                    print("El nombre es $_nombre y su password es $_password");
-                    // Navegar a la siguiente pantalla
                     Navigator.pushNamed(context, "/");
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 10,
                   ),
@@ -122,8 +118,9 @@ class ContactPage extends StatelessWidget {
                 ),
                 child: const Text('Enviar', style: TextStyle(fontSize: 18, color: Colors.white)),
               ),
+
               //PIE DE PAGINA
-                const SizedBox(height: 295),
+                const SizedBox(height: 265),
                 Container(
                   color: const Color(0xFFB29079),
                   padding: const EdgeInsets.symmetric(vertical: 10.0),

@@ -14,7 +14,7 @@ class RegisterPage extends StatelessWidget {
     
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(10.0),
+        preferredSize: const Size.fromHeight(10.0),
         child: AppBar(
           backgroundColor: const Color(0xFFB29079),
           centerTitle: true,
@@ -26,7 +26,7 @@ class RegisterPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 80),
+              const SizedBox(height: 80),
               const Text(
                 'Registrarse',
                 style: TextStyle(
@@ -37,7 +37,7 @@ class RegisterPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40.0),
+                padding: const EdgeInsets.symmetric(horizontal: 40.0),
                 child: Form(
                   key: _formKey,
                   child: Column(
@@ -48,7 +48,7 @@ class RegisterPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           labelText: 'Nombre de Usuario*',
-                          labelStyle: TextStyle(color: const Color.fromARGB(255, 75, 75, 75)),
+                          labelStyle: const TextStyle(color: Color.fromARGB(255, 75, 75, 75)),
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -60,14 +60,14 @@ class RegisterPage extends StatelessWidget {
                           _name = value ?? '';
                         },
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           labelText: 'Correo Electrónico*',
-                          labelStyle: TextStyle(color: const Color.fromARGB(255, 75, 75, 75)),
+                          labelStyle: const TextStyle(color:  Color.fromARGB(255, 75, 75, 75)),
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
@@ -79,14 +79,14 @@ class RegisterPage extends StatelessWidget {
                           _email = value ?? '';
                         },
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           labelText: 'Contraseña*',
-                          labelStyle: TextStyle(color: const Color.fromARGB(255, 75, 75, 75)),
+                          labelStyle: const TextStyle(color:  Color.fromARGB(255, 75, 75, 75)),
                         ),
                         obscureText: true,
                         validator: (value) {
@@ -99,14 +99,14 @@ class RegisterPage extends StatelessWidget {
                           _password = value ?? '';
                         },
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       TextFormField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           labelText: 'Confirmar Contraseña*',
-                          labelStyle: TextStyle(color: const Color.fromARGB(255, 75, 75, 75)),
+                          labelStyle:const TextStyle(color:  Color.fromARGB(255, 75, 75, 75)),
                         ),
                         obscureText: true,
                         validator: (value) {
@@ -142,7 +142,7 @@ class RegisterPage extends StatelessWidget {
                 child: const Text('Registrarse', style: TextStyle(fontSize: 18, color: Colors.white)),
               ),
               //PIE DE PAGINA
-              const SizedBox(height: 232), 
+              const SizedBox(height: 196), 
               Container(
                 color: const Color(0xFFB29079),
                 padding: const EdgeInsets.symmetric(vertical: 10.0),

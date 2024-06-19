@@ -9,7 +9,7 @@ class WelcomeRegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(30.0),
+        preferredSize: const Size.fromHeight(30.0),
         child: AppBar(
           backgroundColor: const Color(0xFFB29079),
           title: const Text(
@@ -44,7 +44,7 @@ class WelcomeRegisterPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 60),
+              const SizedBox(height: 60),
               ListTile(
                 leading: const Icon(Icons.home),
                 title: const Text("Inicio"),
@@ -64,14 +64,14 @@ class WelcomeRegisterPage extends StatelessWidget {
                     onTap: () {
                       Navigator.pushNamed(context, "/pasteleria");
                     },
-                    contentPadding: EdgeInsets.only(left: 70.0),
+                    contentPadding: const EdgeInsets.only(left: 70.0),
                   ),
                   ListTile(
                     title: const Text("Panadería"),
                     onTap: () {
                       Navigator.pushNamed(context, "/panaderia");
                     },
-                    contentPadding: EdgeInsets.only(left: 70.0),
+                    contentPadding: const EdgeInsets.only(left: 70.0),
                   ),
                 ],
               ),
@@ -257,7 +257,7 @@ class WelcomeRegisterPage extends StatelessWidget {
                         aspectRatio: 16 / 9,
                         autoPlayCurve: Curves.fastOutSlowIn,
                         enableInfiniteScroll: true,
-                        autoPlayAnimationDuration: Duration(milliseconds: 800),
+                        autoPlayAnimationDuration: const Duration(milliseconds: 800),
                         viewportFraction: 0.8,
                       ),
                       items: [
@@ -286,7 +286,7 @@ class WelcomeRegisterPage extends StatelessWidget {
                         return Builder(
                           builder: (BuildContext context) {
                             return Card(
-                              color: Color.fromRGBO(
+                              color: const Color.fromRGBO(
                                   193, 170, 157, 1.0), // Color café
                               child: Column(
                                 children: <Widget>[
@@ -305,7 +305,7 @@ class WelcomeRegisterPage extends StatelessWidget {
                                     title: Text(
                                       item.title,
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.white, // Color del texto
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -313,7 +313,7 @@ class WelcomeRegisterPage extends StatelessWidget {
                                     subtitle: Text(
                                       item.description,
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(color: Colors.white),
+                                      style: const TextStyle(color: Colors.white),
                                     ),
                                   ),
                                 ],
@@ -442,7 +442,7 @@ class WelcomeRegisterPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             ElevatedButton(  //SI ALCANZO HACER ESTO SINO BORRAR
                               onPressed: () {
                                 // Acción del botón

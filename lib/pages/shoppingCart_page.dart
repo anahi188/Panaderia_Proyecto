@@ -8,11 +8,14 @@ class ShoppingCartPage extends StatefulWidget {
 }
 
 class _ShoppingCartPageState extends State<ShoppingCartPage> {
- @override
+  int quantity = 1; 
+  double price = 40.00; 
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(30.0),
+        preferredSize: const Size.fromHeight(30.0),
         child: AppBar(
           backgroundColor: const Color(0xFFB29079),
           title: const Text(
@@ -47,7 +50,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const UserAccountsDrawerHeader(
                 accountName: Text("Arianna Cóndor"),
                 accountEmail: Text("ari.condor@gmail.com"),
@@ -77,7 +80,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                     onTap: () {
                       Navigator.pushNamed(context, "/pasteleria");
                     }, //poner la ruta
-                    contentPadding: EdgeInsets.only(left: 70.0),
+                    contentPadding: const EdgeInsets.only(left: 70.0),
                   ),
                   ListTile(
                     title: const Text("Panadería"),
@@ -116,8 +119,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  color:
-                      const Color(0xFFF6F5EC), // Fondo para la parte superior
+                  color: const Color(0xFFF6F5EC), // Fondo para la parte superior
                   child: Column(
                     children: [
                       Align(
@@ -162,7 +164,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                     ),
                     SizedBox(height: 10),
                     Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: 20),
+                      padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
                         'Carrito Actualizado',
                         textAlign: TextAlign.center,
@@ -175,8 +177,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                 Row(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(
-                          left: 20), // Margen a la izquierda de la imagen
+                      margin: const EdgeInsets.only(left: 20), // Margen a la izquierda de la imagen
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.asset(
@@ -187,35 +188,94 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                       ),
                     ),
                     const SizedBox(width: 30),
-                    const Expanded(
+                    Expanded(
                       flex: 2,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Paquete para eventos de 15 personas',
+                          const Text(
+                            'Paquete para eventos de 50 personas',
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 5),
+                          const SizedBox(height: 5),
                           Text(
-                            'Total: \$57.22',
-                            style: TextStyle(
+                            ' \$${price.toStringAsFixed(2)}',
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                          const SizedBox(height: 35),
+                          Text(
+                            'Total: \$${(price * quantity).toStringAsFixed(2)}',
+                            style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                               color: Colors.red,
                             ),
                           ),
+                          const SizedBox(height: 10),
+                          Row(
+                            children: [
+                              IconButton(
+                                icon: const Icon(Icons.remove),
+                                onPressed: () {
+                                  setState(() {
+                                    if (quantity > 1) {
+                                      quantity--;
+                                    }
+                                  });
+                                },
+                              ),
+                              Text(
+                                '$quantity',
+                                style: const TextStyle(fontSize: 18),
+                              ),
+                              IconButton(
+                                icon: const Icon(Icons.add),
+                                onPressed: () {
+                                  setState(() {
+                                    quantity++;
+                                  });
+                                },
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
+                    IconButton(
+                      icon: const Icon(Icons.delete, color: Colors.red),
+                      onPressed: () {
+                      },
+                    ),
                   ],
                 ),
-
+                const SizedBox(height: 130),
+                 Center(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/packages");
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromRGBO(102, 64, 50, 1.0),
+                    ),
+                    child: const Text(
+                      'Regresar',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+                
+                
                 //PIE DE PAGINA
-                const SizedBox(height: 20),
+                const SizedBox(height: 240),
                 Container(
                   color: const Color(0xFFB29079),
                   padding: const EdgeInsets.symmetric(vertical: 10.0),

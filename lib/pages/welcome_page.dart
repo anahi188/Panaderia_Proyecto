@@ -46,7 +46,7 @@ class WelcomePage extends StatelessWidget {
               SizedBox(height: 20),
               const UserAccountsDrawerHeader(
             accountName: Text("Arianna Cóndor"), 
-            accountEmail: Text("ari.condor@gmail.com"),
+            accountEmail: Text("arianna.condor@gmail.com"),
             currentAccountPicture: CircleAvatar(
               backgroundImage: AssetImage('images/user.jpg'),
             ),
@@ -148,6 +148,7 @@ class WelcomePage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
+                      
                     ],
                   ),
                 ),
@@ -255,7 +256,7 @@ class WelcomePage extends StatelessWidget {
                         aspectRatio: 16 / 9,
                         autoPlayCurve: Curves.fastOutSlowIn,
                         enableInfiniteScroll: true,
-                        autoPlayAnimationDuration: Duration(milliseconds: 800),
+                        autoPlayAnimationDuration: const Duration(milliseconds: 800),
                         viewportFraction: 0.8,
                       ),
                       items: [
@@ -284,7 +285,7 @@ class WelcomePage extends StatelessWidget {
                         return Builder(
                           builder: (BuildContext context) {
                             return Card(
-                              color: Color.fromRGBO(
+                              color: const Color.fromRGBO(
                                   193, 170, 157, 1.0), // Color café
                               child: Column(
                                 children: <Widget>[
@@ -303,7 +304,7 @@ class WelcomePage extends StatelessWidget {
                                     title: Text(
                                       item.title,
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.white, // Color del texto
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -311,7 +312,7 @@ class WelcomePage extends StatelessWidget {
                                     subtitle: Text(
                                       item.description,
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(color: Colors.white),
+                                      style: const TextStyle(color: Colors.white),
                                     ),
                                   ),
                                 ],
@@ -423,10 +424,10 @@ class WelcomePage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(
                               20.0), // Ajusta el radio de las esquinas según tu preferencia
                         ),
-                        child: Column(
+                        child: const Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.only(
                                   bottom:
                                       5.0), // Ajusta este valor para mover el texto hacia arriba
@@ -437,22 +438,6 @@ class WelcomePage extends StatelessWidget {
                                   fontSize: 30,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 10),
-                            ElevatedButton(  //SI ALCANZO HACER ESTO SINO BORRAR
-                              onPressed: () {
-                                // Acción del botón
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor:
-                                    const Color.fromRGBO(216, 103, 85, 1.0),
-                              ),
-                              child: const Text(
-                                'ENCONTRAR',
-                                style: TextStyle(
-                                  color: Colors.white, // Color del texto
                                 ),
                               ),
                             ),

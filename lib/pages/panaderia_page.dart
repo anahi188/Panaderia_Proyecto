@@ -24,14 +24,14 @@ class PanaderiaPage extends StatelessWidget {
       drawer: Drawer(
         // MENU DRAWER
         child: Container(
-          decoration: BoxDecoration(
-            color: const Color(0xFFE1DACA), // Fondo menu
+          decoration: const BoxDecoration(
+            color: Color(0xFFE1DACA), // Fondo menu
           ),
           child: ListView(
             children: [
-              Center(
+              const Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 30.0),
+                  padding: EdgeInsets.only(top: 30.0),
                   child: Text(
                     'OvenFresh',
                     textAlign: TextAlign.center, // Centra el texto
@@ -43,7 +43,7 @@ class PanaderiaPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 60),
+              const SizedBox(height: 60),
               ListTile(
                 leading: const Icon(Icons.home),
                 title: const Text("Inicio"),
@@ -56,21 +56,21 @@ class PanaderiaPage extends StatelessWidget {
                 leading: const Icon(Icons.shopping_cart),
                 title: const Text("Productos"),
                 iconColor: const Color.fromARGB(255, 92, 77, 66),
-                trailing: Icon(Icons.arrow_drop_down_outlined),
+                trailing: const Icon(Icons.arrow_drop_down_outlined),
                 children: [
                   ListTile(
                     title: const Text("Pastelería"),
                     onTap: () {
                       Navigator.pushNamed(context, "/pasteleria");
-                    }, //poner la ruta
-                    contentPadding: EdgeInsets.only(left: 70.0),
+                    },
+                    contentPadding: const EdgeInsets.only(left: 70.0),
                   ),
                   ListTile(
                     title: const Text("Panadería"),
                     onTap: () {
                       Navigator.pushNamed(context, "/panaderia");
                     },
-                    contentPadding: EdgeInsets.only(left: 70.0),
+                    contentPadding: const EdgeInsets.only(left: 70.0),
                   ),
                 ],
               ),

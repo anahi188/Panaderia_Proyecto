@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
 
         
       },
-      onGenerateRoute: (Settings){  //ESTO NOS DIRECCIONARA A UNA PAGINA EN CONSTRUCCION, OBVIAMENTE DEBERIAMOS CREAR EL ARCHIVO "ERROR"
+      onGenerateRoute: (Settings){  //PAGINA EN CONSTRUCCION
         return MaterialPageRoute(builder: (context) => ErrorPage());
       }
       );
